@@ -25,17 +25,16 @@ function RepositoryList() {
   // Os [] servem para dizer quando o efeito deve ser aplicado, se deixar em branco, será aplicado quando a pagina for carregada.
 
 
-
   return (
     <>
     <section section className="repository-list">
       <h1>Lista de Repositórios</h1>
+        <ul>
+          {repos.map( repos => (
+            <RepositoryItem repos={repos} key={repos.id} />
+          ))}
+        </ul>
 
-      <ul>
-        {repos.map( repos => (
-          <RepositoryItem repos={repos} key={repos.id} />
-        ))}
-      </ul>
     </section>
     </>
   )
