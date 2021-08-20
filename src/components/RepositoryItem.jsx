@@ -7,8 +7,9 @@ function RepositoryItem(props) {
       <p>{props.repos?.description ?? 'Projeto sem Descrição'}</p>
 
       <a href={props.repos?.html_url ?? 'Esse link foi perfido'} target="_blank">
-       Acessar repositório no github
+       Acessar
       </a>
+
     </li>
 
     </>

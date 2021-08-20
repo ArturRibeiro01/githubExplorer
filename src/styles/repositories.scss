@@ -15,12 +15,11 @@ h2{
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-p{
 
-}
 ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr ;
+  gap: 25px;
 }
 
 
@@ -28,15 +27,21 @@ li {
   display: inline-block;
   position: relative;
   border: 1px solid  #ddd;
-  // height: 320px;
-  // width: 250px;
   height: 180px;
   background-color: #fff;
   padding: 1rem;
-  margin: 5px 12.5px 20px;
+  // margin: 5px 12.5px 20px;
   overflow: hidden;
   border-radius: 0.5rem;
 
+}
+
+
+p{
+  color: #3a3a3a;
+  margin-bottom: 10px;
+  line-height: 1.2rem;
+  min-height: 90px;
 }
 
 a{
@@ -48,12 +53,9 @@ a{
   border-radius: 16px;
   position: absolute;
   bottom: 16px;
+  justify-content: end;
 }
 
-p{
-  color: #3a3a3a;
-  margin-bottom: 10px;
-}
 
 
 @media only screen and (max-width: 600px) {
