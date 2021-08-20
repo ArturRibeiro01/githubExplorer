@@ -1,26 +1,43 @@
+
+import { useState, useEffect } from "react";
 import RepositoryItem from "./RepositoryItem";
+import '../styles/repositories.scss'
 
-
-const repository = {
-  name:'Batata',
-  description:'Forms in React',
-  link: 'htttp://github.com/qualquer coisa',
-  subtitle:'E eu sou o Subtitle',
-}
 
 
 function RepositoryList() {
+
+  // Armazena listagem de repositórios
+  const [repos , setRepos] = useState([]);
+
+
+  useEffect(() => {
+      // faz o fetch com a API
+    fetch('https://api.github.com/users/ArturRibeiro01/repos')
+
+        // Recebe os dados e transforma em Json
+      .then(response => response.json())
+
+      //  pega os dados transpomados em json e manda para o State repos
+      .then(data => setRepos(data))
+
+  }, []);
+  // Os [] servem para dizer quando o efeito deve ser aplicado, se deixar em branco, será aplicado quando a pagina for carregada.
+
+
+
   return (
-    <section className="repository-list">
+    <>
+    <section section className="repository-list">
       <h1>Lista de Repositórios</h1>
 
       <ul>
-        <RepositoryItem repository={repository} />
-        <RepositoryItem repository={repository} />
-        <RepositoryItem repository={repository} />
-        <RepositoryItem repository={repository} />
+        {repos.map( repos => (
+          <RepositoryItem repos={repos} key={repos.id} />
+        ))}
       </ul>
     </section>
+    </>
   )
 }
 

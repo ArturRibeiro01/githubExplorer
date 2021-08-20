@@ -5,6 +5,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
+
   mode: isDevelopment ? 'development' : 'production',
 
   devtool: isDevelopment ? 'eval-source-map' : 'source-map',
@@ -31,7 +32,8 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html'),
-    })
+      overlay: false,
+    }),
   ].filter(Boolean),
 
   module:{
