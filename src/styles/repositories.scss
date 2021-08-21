@@ -49,11 +49,17 @@ a{
   color: #7064F5 ;
   border: 1px solid  #7064F5 ;
   background-color: transparent;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 16px;
-  justify-content: end;
-}
+  position: relative;
+  bottom: 10px;
+  transition: 0.3s ease-in ;
 
+  &:hover{
+    background-color: #7064F5;
+    color: #fff;
+  }
+}
 
 
 @media only screen and (max-width: 600px) {
