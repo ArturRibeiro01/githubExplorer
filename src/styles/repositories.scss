@@ -44,6 +44,11 @@ p{
   min-height: 90px;
 }
 
+small {
+  color: #555;
+  font-size: 0.6rem;
+}
+
 a{
   text-decoration: none;
   color: #7064F5 ;
@@ -52,7 +57,7 @@ a{
   padding: 5px 10px;
   border-radius: 16px;
   position: relative;
-  bottom: 10px;
+  bottom: 20px;
   transition: 0.3s ease-in ;
 
   &:hover{
